@@ -1,29 +1,23 @@
-# dbf
+# Dbf
 
-[![Build Status](https://travis-ci.org/mapbox/dbf.svg?branch=master)](https://travis-ci.org/mapbox/dbf)
+[! [Build Status] (https://travis-ci.org/mapbox/dbf.svg?branch=master)] (https://travis-ci.org/mapbox/dbf)
 
-Write [dBase files](https://en.wikipedia.org/wiki/DBase) in pure JavaScript,
-in node.js or browsers. Requires [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/API/ArrayBuffer)
-and [DataView](https://developer.mozilla.org/en-US/docs/Web/API/DataView)
-support.
+Escreva [arquivos dBase] (https://en.wikipedia.org/wiki/DBase) em JavaScript puro,
+Em node.js ou navegadores. Requer [ArrayBuffer] (https://developer.mozilla.org/en-US/docs/Web/API/ArrayBuffer)
+E [DataView] (https://developer.mozilla.org/en-US/docs/Web/API/DataView)
+Apoio, suporte.
 
-## usage
+## Instalação
 
-```
-npm install dbf
-```
+`` `
+Npm install dbf-dk
+`` `
 
-Or just in a browser:
+## Implementação
 
-    https://unpkg.com/dbf@latest/dbf.js
+No Nodejs:
 
-Replace `latest` with the latest version if you want to be sure.
-
-## example
-
-in node:
-
-```js
+`` `js
 var dbf = require('../'),
     fs = require('fs');
 
@@ -42,18 +36,26 @@ function toBuffer(ab) {
     }
     return buffer;
 }
-```
+`` `
 
-## API
+Esta versão foi personalizada para fornecer também a opção de passar, como parâmetro, valor do tamanho da coluna:
 
-### `dbf.structure(array)`
+`` `Js
+var tamanhoColuna=10;
 
-Given an array of objects with string or number attributes, return
-a DataView object referencing an ArrayBuffer that contains a full DBF
-file structure.
+var buf = dbf.structure ([
+    {Foo: 'bar', noo: 10},
+    {Foo: 'louie'}
+],tamanhoColuna);
 
-## Specifications
+`` `
+## API 
 
-* http://www.clicketyclick.dk/databases/xbase/format/dbf.html#DBF_STRUCT
-* http://www.quantdec.com/SYSEN597/GTKAV/section4/chapter_15a.htm
-* http://ulisse.elettra.trieste.it/services/doc/dbase/DBFstruct.htm
+### `dbf.structure (array)`
+
+Dado um conjunto de objetos com atributos de cadeia ou número, retornar um objeto DataView que faz referência a um ArrayBuffer que contém um DBF completo estrutura de arquivos.
+
+### `dbf.structure (array,int)`
+
+Dado um conjunto de objetos com atributos de cadeia ou número, e um inteiro referente ao tamanho da coluna do header,  retornar um objeto DataView que faz referência a um ArrayBuffer que contém um DBF completo estrutura de arquivos.
+
