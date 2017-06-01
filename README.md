@@ -1,23 +1,18 @@
 # Dbf
 
-[! [Build Status] (https://travis-ci.org/mapbox/dbf.svg?branch=master)] (https://travis-ci.org/mapbox/dbf)
-
-Escreva [arquivos dBase] (https://en.wikipedia.org/wiki/DBase) em JavaScript puro,
-Em node.js ou navegadores. Requer [ArrayBuffer] (https://developer.mozilla.org/en-US/docs/Web/API/ArrayBuffer)
-E [DataView] (https://developer.mozilla.org/en-US/docs/Web/API/DataView)
-Apoio, suporte.
+Gerar arquivos DBF em NodeJs.
 
 ## Instalação
 
-`` `
+```
 Npm install dbf-dk
-`` `
+```
 
 ## Implementação
 
 No Nodejs:
 
-`` `js
+```js
 var dbf = require('../'),
     fs = require('fs');
 
@@ -36,19 +31,18 @@ function toBuffer(ab) {
     }
     return buffer;
 }
-`` `
+```
 
 Esta versão foi personalizada para fornecer também a opção de passar, como parâmetro, valor do tamanho da coluna:
 
-`` `Js
+```js
 var tamanhoColuna=10;
 
 var buf = dbf.structure ([
     {Foo: 'bar', noo: 10},
     {Foo: 'louie'}
 ],tamanhoColuna);
-
-`` `
+```
 ## API 
 
 ### `dbf.structure (array)`
