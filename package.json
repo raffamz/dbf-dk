@@ -1,68 +1,27 @@
 {
-  "_args": [
-    [
-      {
-        "raw": "dbf@^0.1.4",
-        "scope": null,
-        "escapedName": "dbf",
-        "name": "dbf",
-        "rawSpec": "^0.1.4",
-        "spec": ">=0.1.4 <0.2.0",
-        "type": "range"
-      },
-      "C:\\Desenvolvimento\\Drakkar\\obl-registros-oficiais"
-    ]
+  "name": "dbfz",
+  "description": "Geração de arquivos DBF",
+  "readmeFilename": "README.md" ,
+ "keywords": [
+    "dbf",
+    "file",
+    "database",
+    "shapefile"
   ],
-  "_from": "dbf@>=0.1.4 <0.2.0",
-  "_id": "dbf@0.1.4",
-  "_inCache": true,
-  "_location": "/dbf",
-  "_nodeVersion": "4.6.1",
-  "_npmOperationalInternal": {
-    "host": "packages-18-east.internal.npmjs.com",
-    "tmp": "tmp/dbf-0.1.4.tgz_1478812735553_0.12794579938054085"
-  },
-  "_npmUser": {
-    "name": "tmcw",
-    "email": "tom@macwright.org"
-  },
-  "_npmVersion": "3.10.9",
-  "_phantomChildren": {},
-  "_requested": {
-    "raw": "dbf@^0.1.4",
-    "scope": null,
-    "escapedName": "dbf",
-    "name": "dbf",
-    "rawSpec": "^0.1.4",
-    "spec": ">=0.1.4 <0.2.0",
-    "type": "range"
-  },
-  "_requiredBy": [
-    "/"
+  "tags": [
+    "dbf"
   ],
-  "_resolved": "https://registry.npmjs.org/dbf/-/dbf-0.1.4.tgz",
-  "_shasum": "162f0d8fd1db37c976458ac6fe6f55b48c72f466",
-  "_shrinkwrap": null,
-  "_spec": "dbf@^0.1.4",
-  "_where": "C:\\Desenvolvimento\\Drakkar\\obl-registros-oficiais",
+  "version": "0.0.1",
   "author": {
-    "name": "Tom MacWright"
+    "name": "Drakkar",
+    "email": "raffamz@gmail.com"
   },
-  "bugs": {
-    "url": "https://github.com/mapbox/dbf/issues"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raffamz/dbfz.git"
   },
-  "dependencies": {
-    "jdataview": "~2.5.0"
-  },
-  "description": "generate dbf files",
-  "devDependencies": {
-    "browserify": "~13.0.1",
-    "tap": "~5.7.2"
-  },
-  "directories": {},
-  "dist": {
-    "shasum": "162f0d8fd1db37c976458ac6fe6f55b48c72f466",
-    "tarball": "https://registry.npmjs.org/dbf/-/dbf-0.1.4.tgz"
+  "dependencies":{
+   "jdataview": "~2.5.0"
   },
   "files": [
     "dbf.js",
@@ -70,33 +29,9 @@
     "index.js",
     "json2dbf.js"
   ],
-  "gitHead": "198e1c3b0ae789b0cc4be010cb95cbcfe48275b3",
-  "homepage": "https://github.com/mapbox/dbf#readme",
-  "keywords": [
-    "dbf",
-    "file",
-    "database",
-    "shapefile"
-  ],
-  "license": "BSD-2-Clause",
-  "main": "index.js",
-  "maintainers": [
-    {
-      "name": "tmcw",
-      "email": "tom@macwright.org"
-    }
-  ],
-  "name": "dbf",
-  "optionalDependencies": {},
-  "readme": "ERROR: No README data found!",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/mapbox/dbf.git"
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.8.0"
   },
-  "scripts": {
-    "make": "browserify -s dbf ./ > dbf.js",
-    "prepublish": "npm run make",
-    "test": "tap test/*.js"
-  },
-  "version": "0.1.4"
+  "main": "index.js"
 }
