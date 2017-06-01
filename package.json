@@ -1,5 +1,5 @@
 {
-  "name": "dbfz",
+  "name": "dbf-dk",
   "description": "Geração de arquivos DBF",
   "readmeFilename": "README.md" ,
  "keywords": [
@@ -9,7 +9,9 @@
     "shapefile"
   ],
   "tags": [
-    "dbf"
+    "dbf",
+    "dbf-dk",
+    "drakkar"
   ],
   "version": "0.0.1",
   "author": {
@@ -18,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/raffamz/dbfz.git"
+    "url": "https://github.com/raffamz/dbf-dk.git"
   },
   "dependencies":{
    "jdataview": "~2.5.0"
